@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Maven: org.jmlspecs:jmlruntime:20140525">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jmlruntime.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
