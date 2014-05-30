@@ -18,12 +18,12 @@ public class Auction{
          return new TemplateHTMLContent("ViewItemResponse.ftl", m);
      }
 
-    public static final Content getCurrentPrice(){
-          return new TextContent(String.format("US $%,.2f", AuctionItemModel.getInstance().getCurrentPrice()));
+    public static final Content getCurrentPrice(double currentPrice){
+          return new TextContent(String.format("US $%,.2f", currentPrice));
     }
 
 
-    public static final Content bid(int amt){
+    public static final Content bid(double amt){
         return new TextContent("OK");
     }
 
@@ -32,7 +32,7 @@ public class Auction{
         return new TextContent("OK");
     }
 
-    public static final Content invalidBid(int amt){
+    public static final Content invalidBid(double amt){
 
         Map m = new HashMap();
 

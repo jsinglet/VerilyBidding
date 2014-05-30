@@ -4,23 +4,19 @@ import app.AuctionItemModel;
 
 public class Auction {
 
-    public static final void view(){
+    public static final void view(){}
+
+    public static final double getCurrentPrice(){
+        return AuctionItemModel.getInstance().getCurrentPrice();
     }
 
-    public static final void getCurrentPrice(){
-
-    }
-
-    //@ requires amt > 10;
+    //@ requires amt > AuctionItemModel.getInstance().getCurrentPrice();
     //@ onFail <- invalidBid(amt);
-    public static final void bid(int amt){
+    public static final void bid(double amt){
         AuctionItemModel.getInstance().setCurrentPrice(
                 amt
         );
 
-//        AuctionItemModel.getInstance().setCurrentPrice(
-//                AuctionItemModel.getInstance().getCurrentPrice() + amt
-//        );
 
     }
 
@@ -29,8 +25,6 @@ public class Auction {
         AuctionItemModel.getInstance().reset();
     }
 
-    public static final void invalidBid(int amt){
-
-    }
+    public static final void invalidBid(double amt){}
 
 }
